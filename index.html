@@ -1,0 +1,89 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<title>Length Calculator</title>
+<script>
+         function myFirstfunction(){
+		 var e = document.getElementById("selectorid");
+		 var text = e.options[e.selectedIndex].value;
+         var tobeconveted = document.getElementById('id1').value;
+		if (text =='Milimeter' && tobeconveted > 0) {
+		  //  block of code to be executed if condition1 is true
+		   document.getElementById('id2').value =tobeconveted + ' mm';
+			document.getElementById('id3').value =tobeconveted /10+' cm';
+			document.getElementById('id4').value =tobeconveted /1000+' m';
+			 document.getElementById('id5').value =tobeconveted /1000000+' km';
+            
+		} else if (text =='Centimeter' && tobeconveted > 0) {
+		
+		   document.getElementById('id2').value =tobeconveted*10 +' mm';
+			document.getElementById('id3').value =tobeconveted +' cm';
+			document.getElementById('id4').value =tobeconveted /100+' m';
+			 document.getElementById('id5').value =tobeconveted /100000+' km';
+			 
+		} else if (text =='Meter'  && tobeconveted > 0) {
+		
+		   document.getElementById('id2').value =tobeconveted*1000 +' mm';
+			document.getElementById('id3').value =tobeconveted*100+' cm';
+			document.getElementById('id4').value =tobeconveted +' m';
+			 document.getElementById('id5').value =tobeconveted /1000+' km';
+			 
+		} else if (text =='Kilometer' && tobeconveted > 0) {
+		
+		   document.getElementById('id2').value =tobeconveted*1000000 +' mm';
+			document.getElementById('id3').value =tobeconveted*100000+' cm';
+			document.getElementById('id4').value =tobeconveted*1000+' m';
+			 document.getElementById('id5').value =tobeconveted +' km';
+            
+            
+		  //  block of code to be executed if the condition1 is false and condition2 is true
+		} else {
+		   window.alert(' please enter a value to be converted');
+		  //  block of code to be executed if the condition1 is false and condition2 is false
+		}
+		    
+			}
+	
+</script>
+</head>
+<body>
+<h1><CENTER><font ><marquee>LENGTH CALCULATOR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    LENGTH CALCULATOR                                           </marquee></font ></CENTER></h1>
+
+<br><br><br><br><br><br>
+<h2><center>Measurement</center></h2>
+<table border="0" align="CENTER" width="400px">
+		<tr><td>
+<select onchange="" id="selectorid" class="form-select form-select-lg" >
+
+            <option value="Milimeter">Milimeter</option>
+			<option value="Centimeter" >Centimeter</option>
+			<option value="Meter" >Meter</option>
+			<option value="Kilometer" >Kilometer</option>
+         
+
+        </select>
+		</td></tr>
+		<tr><td>
+<input value="" id="id1" placeholder="Value" class="form-control form-control-lg">
+<br><br>
+<input value="" id="id2" placeholder="Milimeters" class="form-control form-control-lg" disabled>	
+<input value="" id="id3" placeholder="Centimeters" class="form-control form-control-lg"disabled>
+<input value="" id="id4" placeholder="Meters" class="form-control form-control-lg"disabled>	
+<input value="" id="id5" placeholder="Kilometers" class="form-control form-control-lg"disabled>
+		
+		</td></tr>
+		<tr><td>
+		<center><button type="button" onclick="myFirstfunction()" class="btn btn-secondary">Convert</button><center>
+		</td></tr>
+
+		
+</table>
+
+
+
+
+
+</body>
+</html>>
